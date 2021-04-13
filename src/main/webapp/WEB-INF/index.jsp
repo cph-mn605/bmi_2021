@@ -14,8 +14,68 @@
 
     <jsp:body>
 
-        <div>
-            <h2>Our Cool Site</h2>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+
+            <h2>BMI beregner</h2>
+
+            <form method="post" action="${pageContext.request.contextPath}/fc/bmiresult">
+                <div class="form-group">
+                    <label for="height">Højde i cm: </label>
+                    <input id="height" name="height" type="text" class="form-control"/><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="weight">Vægt i kg: </label>
+                <input id="weight" name="weight" type="text" class="form-control"/><br>
+                </div>
+
+                </br>
+
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+
+                <label for="sport">Din primære idræt:</label>
+
+                <select name="sport" id="sport">
+                    <option value="1">Fodbold</option>
+                    <option value="2">Håndbold</option>
+                    <option value="3">Golf</option>
+                    <option value="4">Tennis</option>
+                </select>
+
+                </br>
+
+                <input type="checkbox" id="hobby1" name="hobby1" value="Jeg går op i sund kost">
+                <label for="vehicle1"> Jeg går op i sund kost</label><br>
+                <input type="checkbox" id="hobby2" name="hobby2" value="Jeg har et sommerhus">
+                <label for="vehicle2"> Jeg har et sommerhus</label><br>
+                <input type="checkbox" id="hobb3" name="hobby3" value="Jeg har et kæledyr">
+                <label for="vehicle3"> Jeg har et kæledyr</label>
+
+                <br>
+
+
+                <c:if test="${requestScope.error != null}">
+                    <p style="color:red">
+                            ${requestScope.error}
+                    </p>
+                </c:if>
+
+                <button type="submit" class="btn btn-primary"> Beregn BMI</button>
+
+            </form>
+
+
+            </div>
+            <div class="col-sm-4"></div>
+
+        </div>
+
+
 
             <div style="margin-top: 3em;margin-bottom: 3em;">
                 Main page for this 2. semester start project used at cphbusiness.dk

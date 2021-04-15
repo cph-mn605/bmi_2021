@@ -15,6 +15,7 @@
         <p>Hop ud på <a href="${pageContext.request.contextPath}">forsiden</a> og gå i gang</p>
         <h3>Vil du se alle dine gamle registringer?</h3>
         <p><a href="${pageContext.request.contextPath}/fc/mybmientries">Se liste med alle gamle BMi målinger</a></p>
+        <p><a href="${pageContext.request.contextPath}/fc/managesports">Gå til sportsgrene</a></p>
     </jsp:body>
 
 
